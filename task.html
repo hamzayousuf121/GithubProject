@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>
+Home
+</title>
+
+<link href="css/reset.css" type="text/css" rel="stylesheet">
+<link href="css/style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div id="wrapper">
+<div id="header" class="clrchange" class="clearfix">
+	<div class="logo">
+		<img src="image/logo.jpg" alt="LOGO" title="Logo">
+	</div>
+	<div class="header-right">
+	<ul>
+	<li title="Home Page"> <a href="JavaScript:void(0);" onclick="tabs('home');">Home</a></li>
+	<li title="Contact Us"><a href="JavaScript:void(0);" onclick="tabs('contact');">Contact Us</a></li>
+	<li title="About Us">  <a href="JavaScript:void(0);" onclick="tabs('about');">About</a></li>
+	<li title="Services">  <a href="JavaScript:void(0);" onclick="tabs('services');">Services</a></li>
+	</ul>
+	</div>
+</div>
+<div id="main-content" class="clearfix">
+		<div class="left-content">
+		<img src="image/catapple.jpg" alt="cat apple laptop1"title="cat using apple laptop">
+        </div>
+		<div class="right-content" id="change">
+	<h3>This is the main page of the site</h3><br>
+<p>
+	<span>The page you are looking for</span>
+		does not exist.Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a conven lorem ipsum dollar east
+	pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a conven lorem ipsum dollar east .This is the demo website.
+	.This is the demo website.</p>
+</div>
+</div>
+<div id="footer"class="clrchange"class="effect">
+<div class="footer-top"class="clrchange" class="effect">
+	<p class="clrchange" class="effect"style="padding:10px">All work &copy; Pakistan Memon Federation </p>
+<div class="footer-bottom"class="clrchange"class="effect">
+</div></div>
+</div>
+<script>
+function tabs(page){
+if(page =="home"){
+    var change = document.getElementById("change");
+var html = "<h3> Home page</h3 <br> <br><p>A home page also refers to the first page that appears upon opening a web browser, sometimes called the start page, although the home page of a website can be used as a start page. This start page can be a website, or it can be a page with various browser functions such as the display of thumbnails</p>";
+change.innerHTML = html;
+}
+else if(page=="about"){
+  var html =" <h3> About Us </h3> <br><p> This About Us page for Madebyband takes a bit of a different approach, but still manages to instantly communicate the brand’s personality via some hand crafted type and a dispersal of simple accompanying images. The use of handwritten type adds a unique personal touch to the page design, and the clean, simple imagery and presence of white space helps to balance everything out<p>";
+  var change = document.getElementById("change");
+  change.innerHTML = html;
+
+}
+else if(page=="contact"){
+    var change = document.getElementById("change");
+    var html = " <h3>Contact Page</h3> <br><p> A contact page is a standard web page on a website used to allow the visitor to contact the website owner or people who are responsible for the maintenance of the site. The page often contains one or more of the following items a mailto link to an e-mail address a description of personalia like a (organization) name, address, zip code, residential area, with sometimes a map indicating a certain physical location and a description or visualization of how to get there a set of visual icons or textual links to social networking services a contact form with entries where the visitor can fill in their name, subject and message and send or reset it<p></h3>"
+        change.innerHTML = html;
+    }
+else if(page=="services"){
+    var change = document.getElementById("change");
+   var html = " <h3>  web development Services </h3> <br> <p>Quality Web Development Services.</br> Buzz Interactive is a web development agency with a team top web developers in Pakistan.<br/> Responsive Website Design.<br/> We understand the power of responsive websites CMS based Website Development<br/> E-Commerce Website Development SEO Optimized Websites. Mobile App Development.</p>";
+change.innerHTML = html;
+
+}
+else {
+    console.log(page);
+}
+}
+</script>
+</body>

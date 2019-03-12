@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #imgs
+    {
+    position: absolute;
+    left:300px;
+    top:70px;
+    width:600px;
+    height:450px;
+   }
+   #frwd{
+       position: absolute;
+       right:300px;
+       top:225px;
+       width:100px;
+       height:100px;
+   }
+   #backwrd{
+    position: absolute;
+       left:150px;
+       top:225px;
+       transform: rotate(180deg);
+       width:100px;
+       height:100px;
+   }
+   h1{
+       text-align: center;
+       margin-right:150px;
+       color:blueviolet;
+   }
+   </style>
+   <!-- <script>
+       var numberform = 0;
+function forward(num) {
+       numberform = numberform + num ;
+    document.getElementById('imgs').src = "images/"+numberform+".jpg";
+       }
+     function backward(num) {
+        numberform = numberform - num ;
+        document.getElementById('imgs').src = "images/"+numberform+".jpg";
+     }
+//       </script> -->
+<!-- // </head>
+// <body>
+//     <h1>Image Slider Assigment</h1>
+//         <img id="imgs" src="images/1.jpg"/>
+//         <img id="frwd" onclick="change('+');" src="images/frword.png"/>
+//         <img id="backwrd" onclick="change('-');" src="images/frword.png"/> -->
+       <!-- <script>
+//                 var audio = ['01.mp3','02.mp3','03.mp3','04.mp3','05.mp3'];
+//                 var i = 0;
+//                 function change(ele){
+//                     if(ele ==='+'){
+//                     for(var i = 0 ; i < audio.length;i++ ){
+//                       if(i === audio.length-1){
+//                          // alert(audio);
+//                       }
+//                     }
+//                   }
+//                     else{
+//                         i++;
+//                     }
+//                     alert(document.getElementById("audio").src = audio[i]);
+//                     if(ele ==='-'){
+//                       i=== 0;
+//                       i = audio.length-1;
+//                       }
+//                     else{
+//                         i--;
+//                     }
+//                     document.getElementById("audio").src = audio[i];
+//                 }
+              
+            
+          
+// //                 </script>
+// //           </body>
+// // </html>
+// //         <div class="slider" id="pg">
+// //             <img id="sl" src="./images/pic1.jpg" width="99.9%" height="90%">
+// //             <img src="./images/icon/icon1.png" id="left" onclick="slideShow('-')">
+// //             <img src="./images/icon/icon2.png" id="right" onclick="slideShow('+')">
+// //         </div>
+// //     </div>
+// //     <script> -->
+<!-- // //         var a = 0;
+// //         function slideShow(value) {
+// //             var imgSrc = ["./images/pic1.jpg", "./images/pic2.jpg", "./images/pic3.jpg",
+// //                 "./images/pic4.jpg", "./images/pic5.jpg", "./images/pic6.jpg",
+// //                 "./images/pic7.jpg", "./images/pic8.jpg", "./images/pic9.jpg", "./images/pic10.PNG"]
+
+// //             if (value == '+' && a < imgSrc.length - 1) {
+// //                 console.log("if+")
+// //                 a = a + 1;
+// //                 document.getElementById('sl').src = imgSrc[a]
+// //             }
+// //             else if (value == '-') {
+// //                 a = a - 1;
+// //                 document.getElementById('sl').src = imgSrc[a]
+// //             }
+
+// //         }
+
+// //         var b = 9;
+// //         function slideShow2(value) {
+// //         console.log("2nd")
+// //             var imgSrc = ["./images/pic1.jpg", "./images/pic2.jpg", "./images/pic3.jpg",
+// //                 "./images/pic4.jpg", "./images/pic5.jpg", "./images/pic6.jpg",
+// //                 "./images/pic7.jpg", "./images/pic8.jpg", "./images/pic9.jpg", "./images/pic10.PNG"]
+
+// //             if (value == '-' && b < imgSrc.length - 1) {
+// //                 console.log("if-")
+                 b = b - 1;
+                 document.getElementById('sl').src = imgSrc[b]
+             }
+           else {
+                 b = 9;
+              document.getElementById('sl').src = imgSrc[b]
+             }
+
+       }
+
+    </script> <

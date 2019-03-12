@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Change Styling Using Recursion Function</h1>
+    <p id="para3">This is the test message </p>
+    <p>This is the test message </p>
+    <p>This is the test message </p>
+    <p>This is the test message </p>
+    <p>This is the test message </p>
+    <script>
+        var rec = document.getElementById("para3").parentNode.childNodes;
+        var num = rec.length - 1;
+        recursion(num);
+        function recursion(val) {
+            if (val <= 0) {
+                return 0;
+            } else {
+                if (rec[val].nodeType === 1) {
+                    rec[val].style.backgroundColor = "red";
+                    rec[val].style.color = "white";
+                }
+            }
+            return recursion(val - 1)
+        }
+    </script>
+</body>
+
+</html>

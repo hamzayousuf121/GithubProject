@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    h1 , h2{
+        margin:30px;}
+        button{
+            height:30px;
+            color:crimson; 
+            margin-left:250px;
+            font-size:25px;
+        }
+        img {
+            width:200px;
+            height:150px;
+        }
+        </style>
+</head>
+<body>
+    <h1>Set Intervel Work</h1>
+   <h2 id="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa libero quas delectus odio error! Libero, ex amet. Nostrum atque rerum pariatur dolorum molestias ex dolorem ut voluptatibus praesentium! Rerum, facilis Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa libero quas delectus odio error! Libero, ex amet. Nostrum atque rerum pariatur dolorum molestias ex dolorem ut voluptatibus praesentium! Rerum, facilis Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa libero quas delectus odio error! Libero, ex amet. Nostrum atque rerum pariatur dolorum molestias ex dolorem ut voluptatibus praesentium! Rerum, facilis Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa libero quas delectus odio error! Libero, ex amet. Nostrum atque rerum pariatur dolorum molestias ex dolorem ut voluptatibus praesentium! Rerum, facilis Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa libero quas delectus odio error! Libero, ex amet. Nostrum atque rerum pariatur dolorum molestias ex dolorem ut voluptatibus praesentium! Rerum, facilis
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate blanditiis suscipit quibusdam veritatis sed deleniti, modi neque optio totam consequatur sunt, atque magni voluptates ipsa quia illum voluptate nisi nobis.</br>
+<br><button type="button"onclick="clearIntervala();">Click me to Clear Set Intervel</button></h2>
+</body>
+<script>
+   
+var abc = setInterval(changeClr,1000);
+function changeClr(){
+    var x = Math.random()*255;
+    a = Math.floor(x);
+    var y = Math.random()*255;
+    b = Math.floor(y);
+    var z = Math.random()*255;
+    c = Math.floor(z);
+    var paragraph = document.getElementById("para");
+   paragraph.style.color = "rgb("+a+" ,"+b+" ,"+c+")";
+   var heading = document.getElementsByTagName("h1");
+   heading[0].style.color = "rgb("+b+" ,"+c+" ,"+a+")";
+    }
+function clearIntervala(){
+    clearInterval(abc);
+}
+</script>
+</html>

@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <link href="Main.css" rel="stylesheet"/>
+        <script src="jquery-1.10.2.min.js"></script>
+    </head>
+    <body>
+        <div id="bg">
+            <div id="blackLayer"></div>
+            <img src="naat1.jpg"/>
+        </div>
+       
+        <div id="main">
+            <div id="image">
+                <img src="naat1.jpg"/>
+            </div>
+            <div id="player">
+                <div id="naatTitle">Demo</div>
+                <div id="buttons">
+                    <button id="pre" onclick="pre()"><img src="Pre.png" height="90%" width="90%"/></button>
+                    <button id="play" onclick="playOrPausenaat()"><img src="Pause.png"/></button>
+                    <button id="next" onclick="next()"><img src="Next.png" height="90%" width="90%"/></button>
+                </div>
+                
+                <div id="seek-bar">
+                    <div id="fill"></div>
+                    <div id="handle"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+    
+        var naats = ["naat1.mp3","naat2.mp3","naat3.mp3","Chamak-Tum-Se-(HamariWeb.com).mp3","Dua-(Hamariweb.com).mp3","Lam-Yati-Naziro-(HamariWeb.com).mp3","Sar-Taba-Qadam(Hamariweb.com).mp3","Shehr-e-Nabi(S.A.W.W)(Hamariweb.com).mp3","Yaad-May-Teri(Hamariweb.com).mp3","Ya-Rasool-Allah-(S.A.W)-Tere-(Hamariweb.com).mp3","Yeh-Kiss-Nay-Pukara-Muhammad-(Hamariweb.com).mp3"];
+        var poster = ["naat1.jpg","naat2.jpg","naat3.jpg","naat4.jpg","naat5.jpg","naat6.jpg","naat7.jpg","naat8.jpg","naat9.jpg","naat10.jpg","naat11.jpg"];
+        
+        var naatTitle = document.getElementById("naatTitle");
+        var fillBar = document.getElementById("fill");
+        
+        var naat = new Audio();
+        var currentnaat = 0;    // it point to the current naat
+        
+        window.onload = playnaat;   // it will call the function playnaat when window is load
+        
+        function playnaat(){
+            
+           naat.src = naats[currentnaat];  //set the source of 0th naat 
+            
+            naatTitle.textContent = naats[currentnaat]; // set the title of naat
+            
+           naat.play();    // play the naat
+        }
+        
+        function playOrPausenaat(){
+            
+            if(naat.paused){
+                naat.play();
+                $("#play img").attr("src","Pause.png");
+            }
+            else{
+                naat.pause();
+                $("#play img").attr("src","Play.png");
+            }
+        }
+        
+        naat.addEventListener('timeupdate',function(){ 
+            
+            var position = naat.currentTime / naat.duration;
+            
+            fillBar.style.width = position * 100 +'%';
+        });
+        function next(){
+            currentnaat++;
+            if(currentnaat > 12){
+                currentnaat = 0;
+            }
+            playnaat();
+            $("#play img").attr("src","Pause.png");
+            $("#image img").attr("src",poster[currentnaat]);
+            $("#bg img").attr("src",poster[currentnaat]);
+        }
+    
+        function pre(){
+            currentnaat--;
+            if(currentnaat < 0){
+                currentnaat = 12;
+            }
+            playnaat();
+            $("#play img").attr("src","Pause.png");
+            $("#image img").attr("src",poster[currentnaat]);
+            $("#bg img").attr("src",poster[currentnaat]);
+        }
+    </script>
+</html>

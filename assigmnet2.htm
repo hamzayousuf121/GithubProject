@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+	<style>
+	div{
+	position:relative;
+	top:150px;
+	left:200px;
+	}
+	button{
+		font-size:25px;
+		background-color:green;
+		color:white;
+		border:2 px solid orange;
+	}
+	</style>
+    <script>
+		var arr = [];
+        function result() 
+        {
+            var name = prompt("Enter Your Name");
+           arr.push(name);
+			document.getElementById("name").innerHTML = arr;
+				}
+			</script>
+		</head>
+		<body >
+		<div>
+		<h1>Assigment 2</h1>
+			<button onclick='result();'> Add Name</button>
+			<h2 id="name"> </h2>
+	</div>
+</body>
+</html>

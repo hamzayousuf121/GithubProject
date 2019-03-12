@@ -1,0 +1,47 @@
+<!-- Assignment (Slideshow image ) -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="cli('-')">Pre</button>
+    <img src='01.png' width="50" height="50" id='field' />
+    <button onclick="cli('+')">Next</button>
+
+    <script>
+        var arr = ['01.png', '02.png', '06.png']
+        var i = 0;
+
+        function cli(ele) {
+            if (ele === '+') {
+                if (i === arr.length - 1) {
+                    i = 0
+                }
+                else {
+                    i++
+                }
+                document.getElementById('field').src = arr[i]
+            }
+
+            else if (ele === '-') {
+                 if (i === 0) {
+                    i = arr.length - 1
+                }
+                else {
+                    i--
+                }
+                document.getElementById('field').src = arr[i]
+            }
+        }
+    </script>
+</body>
+
+</html>

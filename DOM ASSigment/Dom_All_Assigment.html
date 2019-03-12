@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1> DOM </h1>
+        <div id="form-content" class="content">
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" />
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name" />
+        <label for="email">Email</label>
+        <input type="text" id="email" />
+        </div>
+        <div id="main-content" class="content">
+        <p class="render"> First Name : Alex</p>
+        <p class="render" id="lastName">Last Name: Bank</p>
+        <p class="render"> Email : alexbank@example.com</p>
+        <p class="render"> Country : Pakistan </p>
+        <p class="render"> contact : +92 300 1234567</p>
+        <!-- ajgdsjgjsg jsgjsagjga -->
+        </div>
+        </div>
+        <script>
+        var data = document.getElementById("main-content").getElementsByTagName("*");
+        var nodes = document.getElementById("main-content");
+
+       console.log(data);
+        console.log(nodes); // Question 1 , 2;
+        for (var i = 0 ; i < nodes.length;i++){
+                console.log(nodes[i].nodeType);
+        }
+           var render =  document.getElementsByClassName("render");
+           for (var i = 0 ; i < render.length; i++) {
+                 console.log(render[i].innerHTML);
+         }
+        // Question no 3,4
+           var type = document.getElementById("form-content");
+           console.log(type.nodeType);
+           var id = document.getElementById("lastName").childNodes;//question 5
+           var siblings = document.getElementById("lastName");//question 5
+            console.log(id.value = "HAMza");//question 6
+         console.log(nodes.firstChild);//question 7
+        console.log(nodes.lastChild);//question 7
+        console.log("Next Siblings"+siblings.nextSibling);// secound last question 
+        console.log("Previous Si"+siblings.previousSibling);// secound last question 
+        var mail = document.getElementById("email");
+        console.log(mail.parentNode);// last question 
+        </script>
+</body>
+</html>

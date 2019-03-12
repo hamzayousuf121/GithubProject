@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: darkgoldenrod;
+        }
+
+        h1 {
+            color: whitesmoke;
+            text-align: center;
+        }
+
+        img {
+            width: 35px;
+            height: 35px;
+            
+        }
+
+        #next {
+            position: absolute;
+            left: 352px;
+            bottom: 85px;
+        }
+
+        #previous {
+            position: absolute;
+            left: 312px;
+            bottom: 85px;
+        }
+
+        #vedio {
+            position: absolute;
+            left: 300px;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <h1>Vedio Player </h1>
+    <video id="vedio" width="900" height="500" controls autoplay>
+        <source id="src" src='Mujh_pe_bhi_Chashme_Karam___2018_Full_HD___Owais_r(360P).mp4' type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <img id="next" src="../Custom-Audio-Player-master/Next.png" onclick="changeval('+')" />
+    <img id="previous" src="../Custom-Audio-Player-master/Pre.png" onclick="changeval('-')" />
+    <script>
+
+        var vedioSrc = ['Dama_Dam_Mast_Qalandar_-_First_time_Beautiful_Kala(360P).mp4', 'Full_HD__New_Hajj_2017_Naat__Meray_AAQAﷺ____Hafiz(360P).mp4', 'Marhaba_Ae_Jaan_E_Janan_by_Owais_Raza_Qadri___Rabi(360P).mp4', 'Mujh_pe_bhi_Chashme_Karam___2018_Full_HD___Owais_r(360P).mp4', 'Owais_Raza_Qadri__-_Al_Nabi_Sallu_Aleh__Complete(360P).mp4', 'Zameen_o_Zaman_Tumhare_Liye____Owais_Raza_Qadri_l(360P).mp4', 'Owais_Raza_Qadri_New_Naat_2017_2018____New_Urdu_Pu(360P).mp4'];
+        var i = 0;
+        function changeval(val) {
+
+            if (val === '+') {
+                if (i === vedioSrc.length - 1) {
+                    i = 0;
+                }
+                else {
+                    i++;
+                }
+                document.getElementById('src').src = vedioSrc[i];
+                document.getElementById('vedio').load();
+
+            }
+            else if (val === '-') {
+                if (i === 0) {
+                    i = vedioSrc.length - 1;
+                }
+                else {
+                    i--;
+                }
+                document.getElementById('src').src = vedioSrc[i];
+                document.getElementById('vedio').load();
+            }
+        }
+    </script>
+</body>
+
+</html>

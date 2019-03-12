@@ -1,0 +1,17 @@
+html body {
+    padding: 0;
+    margin: 0;
+}
+.container {
+    padding: 0 !important;
+}
+.jumbotron {
+    border-radius: 0 !important;
+    background-image: url('images/15235889_1793834470874190_8331224117958010465_o.jpg');
+}
+div img {
+    width: 4em;
+}
+    .iconSection, .row, footer p {
+    margin: 0 !important;
+}

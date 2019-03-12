@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+	<style>
+	div {
+	position:relative;
+	top:150px;
+	left:200px;}
+	button{
+		font-size:25px;
+		background-color:red;
+		color:white;
+		border:2 px solid orange;
+	}
+	</style>
+				<script>
+				var numberform = 0;
+			function addNum(num){
+				numberform = numberform + num ;
+			   document.getElementById("score").innerHTML = numberform;
+			}
+			function subNum(num){
+				numberform -= num ;
+				 document.getElementById("score").innerHTML = numberform;
+			}
+
+
+		</script>
+		</head>
+		<body>
+		<div>
+		<H1>Assigment one</H1>
+		<button  onclick="addNum(5);">Button+</button>    
+		<button  onclick="subNum(5);">Button-</button>
+		<h2>Score:</h2>
+		<h2 id="score"></h2>
+		</div>
+		</body>
+
+		</html>

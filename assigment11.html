@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+        .wrapper , .wrapper2,.wrapper3,.wrapper4{
+            min-height:300px;
+            min-width:300px;
+            padding:25px;
+            float:left;
+            border :1px solid yellow;
+        }
+            img{
+                width:300px;
+                height:300px;
+            }
+            #container{
+                position: absolute;
+                left:200px;
+                top:100px
+            }
+            button
+            {
+            height:30px;
+            color:crimson; 
+            margin-left:250px;
+            font-size:25px;
+            position: absolute;
+            right:220px;
+            top:250px;
+        }
+        </style>
+        <body>
+         <div id="container">
+        <div class="wrapper1">;
+        <div class="wrapper">
+        <div class="wrapper3" style="background-color:rgb(0, 255, 21)">
+        <div class="wrapper2" style="background-color:rgb(180, 61, 180);">
+        <div class="wrapper" style="background-color: crimson">
+        <img id="img" src="./images/4.jpg"/>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <button type="button"onclick="clearIntervala();">Click me to Clear Set Intervel</button></h2>
+</body>
+<script>
+var abc = setInterval(changeClr,1000);
+function changeClr(){
+    var x = Math.random()*255;
+    a = Math.floor(x);
+    var y = Math.random()*255;
+    b = Math.floor(y);
+    var z = Math.random()*255;
+    c = Math.floor(z);
+   
+    var container = document.getElementById("container");
+    //container.style.transform = "rotate("+a+"deg"+")";
+   // $("#container").css('backgroundColor',"rgb("+c+" ,"+b+" ,"+a+")");
+   //container.style.backgroundColor = "rgb("+c+" ,"+b+" ,"+a+")";
+   var ac = Math.floor(Math.random() * 10);
+   var source = document.getElementById("img");
+   source.src = "./images/"+ac+".jpg";
+	$('#container').css ('transform', 'rotate('+a+'deg)');
+     $(".wrapper").css('backgroundColor',"rgb("+b+" ,"+b+" ,"+c+")");
+    }
+function clearIntervala(){
+    clearInterval(abc);
+    }
+
+</script>
+</html>

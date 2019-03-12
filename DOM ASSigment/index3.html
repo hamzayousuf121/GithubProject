@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <h1 id="para">Change color using while loop</h1>
+    <p>THis is a demo test</p>
+    <p>THis is a demo test</p>
+    <p>THis is a demo test</p>
+    <p>THis is a demo test</p>
+    <p>THis is a demo test</p>
+    <p>THis is a demo test</p>
+</div>
+
+<script>
+
+var j = document.getElementById('para')
+        var container = j.firstChild;
+
+        while(container != null) {
+            container.style.backgroundColor = 'red';
+            container.style.color = 'white';
+
+            container = container.nextSibling
+        }
+
+</script>
+</body>
+</html>

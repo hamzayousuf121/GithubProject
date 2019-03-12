@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #imgs
+    {
+    position: absolute;
+    left:300px;
+    top:70px;
+    width:600px;
+    height:450px;
+   }
+   #frwd{
+       position: absolute;
+       right:300px;
+       top:225px;
+       width:100px;
+       height:100px;
+   }
+   #backwrd{
+    position: absolute;
+       left:150px;
+       top:225px;
+       transform: rotate(180deg);
+       width:100px;
+       height:100px;
+   }
+   h1{
+       text-align: center;
+       margin-right:150px;
+       color:blueviolet;
+   }
+   </style>
+   <script>
+       var numberform = 0;
+        function forward(num) {
+       numberform = numberform + num ;
+       if(numberform <=8){
+        document.getElementById('imgs').src = "images/"+numberform+".jpg";
+       }
+       else {
+        document.getElementById('imgs').src = "images/8.jpg";
+          }
+       }
+     function backward(num) {
+        numberform = numberform - num ;
+        if(numberform <=0){
+            document.getElementById('imgs').src = "images/1.jpg";
+        }
+        else{
+            document.getElementById('imgs').src = "images/"+numberform+".jpg";
+
+        }
+     }
+      </script>
+</head>
+<body>
+    <h1>Image Slider Assigment</h1>
+        <img id="imgs" src="images/1.jpg"/>
+        <img id="frwd" onclick="forward(1);" src="images/frword.png"/>
+        <img id="backwrd" onclick="backward(1);" src="images/frword.png"/>
+
+</body>
+</html>

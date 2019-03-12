@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="humpty">
+        <p>All the king's horses.</p>
+        <p>All the dude's crew.</p>
+        <p>All the town's orthopedists.</p>
+        <p>HAMza</p>
+        <p>Asim</p>
+        <p>Ali</p>
+        </div>
+        <script>
+    
+         var d = document.getElementById("humpty");
+        
+         var pCounter = 0;
+     for (var i = 0; i < d.childNodes.length; i++) {
+         if (d.childNodes[i].nodeType === 1 ) {
+         pCounter++;
+         }
+         if (pCounter === 5) {
+         d.childNodes[i].innerHTML = "Asim is my fi.";
+         break;
+         }
+         }
+        </script>
+</body>
+</html>

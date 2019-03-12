@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <head>
+    <style>
+      body {
+        background-color: darkgoldenrod;
+      }
+
+      h1 {
+        color: whitesmoke;
+        margin: 50px;
+      }
+
+      img {
+        width: 17px;
+        height: 17px;
+      }
+
+      #next {
+        position: absolute;
+        left: 40px;
+        top: 156px;
+        transform: rotate(-180deg);
+      }
+
+      #previous {
+        position: absolute;
+        left: 11px;
+        top: 155px;
+      }
+    </style>
+  </head>
+
+<body>
+  <h1>Audio Player</h1>
+  <audio id="audio" controls autoplay>
+    <source src="1.mp3" id="change" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <img id="next" src="../Custom-Audio-Player-master/next1.png" onclick="changeval('+',1)" />
+  <img id="previous" src="../Custom-Audio-Player-master/next1.png" onclick="changeval('-',1)" />
+  <script>
+    var a = 0;
+    function changeval(val, num) {
+      if (val === '+') {
+        a += num;
+        document.getElementById('change').src = '' + a + '.mp3';
+        document.getElementById('audio').load();
+      }
+
+      if (a >= 6) {
+        a = 1;
+        document.getElementById('change').src = '' + a + '.mp3';
+        document.getElementById('audio').load();
+      }
+      else {
+        console.log(a);
+      }
+      if (val === '-') {
+        a -= num;
+        document.getElementById('change').src = '' + a + '.mp3';
+        document.getElementById('audio').load();
+      }
+      if (a <= 0) {
+        a = 6;
+        a -= num;
+        document.getElementById('change').src = '' + a + '.mp3';
+        document.getElementById('audio').load();
+      }
+      else {
+        console.log(a);
+      }
+    }
+  </script>
+</body>
+</html>

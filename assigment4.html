@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="./Bootstrap/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+    <script src="jqueryfile.js"></script>
+    <script src="./function.js"></script>
+    <script>
+    function focuss() {
+        $('#email_info').show();
+    };
+    function blurr() {
+        $('#email_info').hide();
+    };
+        </script>
+   <style>
+    body{
+    background: lightcyan;    
+    }
+    .container{
+        margin:auto;
+        width:800px;
+        height: 500px;
+        border-radius: 10px;
+        margin-top:50px;
+
+    }
+    h1{
+        background: linear-gradient(to bottom, rgb(151, 197, 209) 0%,rgba(125,185,232,0) 100%);  
+        text-align: center;
+    }
+    button{
+        margin-left: 55px;
+        margin-top:-20px;
+        }
+    ul li{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+    }
+    .pswd_info{
+        position:absolute;
+        left: 330px;
+        font-size: 20px;
+        top: 370px;
+        width: 600px; 
+       background: linear-gradient(to bottom, rgb(151, 197, 209) 0%,rgba(125,185,232,0) 100%);  
+    }
+    .invalid{
+        color:red;
+    }
+    .invalidmail{
+        color:red;
+    }
+    #submit{
+        
+        font-size: 30px;
+    width:300px;
+    margin: 30px 0 0 200px;
+    background: linear-gradient(to bottom, rgb(151, 197, 209) 0%,rgba(125,185,232,0) 100%);  
+
+    }
+    h4 ,h1,#submit{
+        padding-left:25px;
+        color:purple;
+    }
+    .valid{
+        color:green;
+    }
+    .pswd_info{
+        display: none;
+    }
+    #email_info{
+        display: none;
+    }
+    #email_info{
+        position:absolute;
+        left: 330px;
+        font-size: 20px;
+        top: 370px;
+        width: 600px; 
+        background: linear-gradient(to bottom, rgb(151, 197, 209) 0%,rgba(125,185,232,0) 100%);  
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+            <h1>Home Assigment</h1>
+    <form action="#">
+            <div class="form-group">
+              <label>Email address</label>
+              <input type="email" required id="Email"onblur="blurr();" name="Email" onfocus="focuss();" class="form-control" placeholder="example@gmail.com" >
+
+            </div>
+            <div class="form-group">
+              <label> Password</label>
+              <input type="password" required name="pswd" id="pswd" class="form-control" class="password" placeholder="Password"  placeholder="Password">
+            </div>
+            <button type="submit"id="submit" onclick="alert('Your form has been submited');" class="btn btn-info">Register</button>
+          </form>
+        </div>
+        <div class="pswd_info">
+        <h4>Password must be meet following requirment</h4>
+        <ul>
+        <li id="letter" class="invalid">At Least one Letter</li>
+        <li id="capital" class="invalid">At Least  One Capital Letter </li>
+        <li id="number" class="invalid">At Least one Number</li>
+        <li id="length" class="invalid">Length must be Atleast 8 Characters</li>
+        </ul>
+        </div>
+    </div>
+    <div id="email_info">
+            <h4>Email must be in following requirment</h4>
+            <ul>
+            <li class="symbol invalidmail">At Least one @ symbol</li>
+            <li class="symbol2 invalidmail">Alphabets</li>
+            <li class="symbol1 invalidmail">At least " . "in Email address</li>
+            </ul>
+            </div>
+        </body>
+</html>
